@@ -1,7 +1,7 @@
 {
   "name": "Спортивный сайт",
   "short_name": "Спорт",
-  "start_url": "/",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#4CAF50",
   "theme_color": "#4CAF50",
@@ -16,5 +16,7 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "orientation": "any",
+  "lang": "ru"
 }
