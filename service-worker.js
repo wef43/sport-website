@@ -17,11 +17,13 @@ self.addEventListener('install', async event => {
   await cache.addAll(assetUrls);
 });
 
-self.addEventListener('fetch', event => {
-  event.respondWith(cacheFirst(event.request));
+self.addEventListener('activate', event => {
+  console.log('Service Worker activated');
 });
 
-async function cacheFirst(request) {
-  const cached = await caches.match(request);
-  return cached || await fetch(request);
-}
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request)
+      .then(response => response || fetch(event.request))
+  );
+});
