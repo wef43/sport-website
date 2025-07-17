@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спортивный сайт</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать в мир спорта!</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="football.html">Футбол</a>
+            <a href="basketball.html">Баскетбол</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Популярные виды спорта</h2>
+        <p>Спорт — это здоровье, сила и дух соревнования!</p>
+    </main>
+    <footer>
+        <p>© 2024 Спортивный сайт</p>
+    </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(reg => console.log('Service Worker зарегистрирован', reg))
+                .catch(err => console.log('Ошибка регистрации SW:', err));
+        }
+    </script>
+</body>
+</html>
